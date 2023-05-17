@@ -1,12 +1,32 @@
 {
-  "name": "backend",
+  "name": "streaming-service-backend",
   "version": "1.0.0",
-  "description": "Cloud service for 3rd party content providers",
+  "description": "Cloud Service for 3rd party streaming services",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Leo",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leo-Phyo-Hein/Siren-Cloud-Service.git"
+  },
+  "keywords": [
+    "streaming",
+    "cloud"
+  ],
+  "author": "Leo Phyo Hein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leo-Phyo-Hein/Siren-Cloud-Service/issues"
+  },
+  "homepage": "https://github.com/Leo-Phyo-Hein/Siren-Cloud-Service#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mysql": "^2.18.1"
+  }
 }

@@ -1,0 +1,26 @@
+{
+  "name": "cloud-service-frontend",
+  "version": "1.0.0",
+  "description": "Cloud Service for 3rd party streaming services",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leo-Phyo-Hein/Siren-Cloud-Service.git"
+  },
+  "keywords": [
+    "streaming",
+    "cloud"
+  ],
+  "author": "Leo Phyo Hein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Leo-Phyo-Hein/Siren-Cloud-Service/issues"
+  },
+  "homepage": "https://github.com/Leo-Phyo-Hein/Siren-Cloud-Service#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
