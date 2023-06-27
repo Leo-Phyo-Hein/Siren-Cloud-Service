@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notflix Login</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <h3>Login to Notflix</h3>
+            <div class="form-group">
+                <label for="user_email">Email</label>
+                <input type="email" id="user_email" value="" placeholder="Enter the account email">
+            </div>
+            <div class="form-group">
+                <label for="user_password">Password</label>
+                <input type="password" id="user_password" value="" placeholder="Enter the account password">
+            </div>
+            <div class="form-group">
+                <button type="button" id="getOTP">Get OTP</button>
+            </div>
+            <div>
+                <p>New to Notflix? <a href="./register.html">Create Account</a></p>
+            </div>
+        </form>
+    </div>
+    
+
+    <script>
+        $(document).ready(function () {
+            $('#getOTP').click(function () { 
+                var user_email = $('#user_email').val();
+                var user_password = $('#user_password').val();
+                var data = {
+                    "user_email": user_email,
+                    "user_password": user_password
+                };
+                $.ajax({
+                    url: "http://localhost:8083/user/login",
+                    type: "POST",
+                    data: JSON.stringify(data),
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function(response) {
+                        if (response.success) {
+                            window.alert("OTP has been sent to you email.");
+                            localStorage.setItem('user_email', user_email);
+                            window.location.assign("http://localhost:3002/2FA.html");
+                        }
+                    },
+                    error: function(xhr, textStatus, err) {
+                        var errorMessage = xhr.responseJSON.message;
+                        window.alert(errorMessage);
+                    }
+                });
+                return false;
+            });
+        });
+    </script>
+</body>
+</html>
+
