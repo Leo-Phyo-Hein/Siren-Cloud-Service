@@ -30,36 +30,101 @@
     <link rel="stylesheet" href="css/upload.css">
 </head>
 <body>
-    <div class="container  align-middle justify-content-center">
-        <form>
-            <h3>UPLOAD CONTENT</h3>
-            <div class="form-group">
-                <label for="content">CONTENT FILE</label>
-                <input type="file" id="content" accept="video/*">
-            </div>
-            <div class="form-group">
-                <label for="content_thumbnail">CONTENT THUMBNAIL</label>
-                <input type="file" id="content_thumbnail" accept="image/*">
-            </div>
-            <div class="form-group">
-                <label for="content_title">CONTENT TITLE</label>
-                <input type="text" id="content_title" value="" placeholder="Enter Content Title">
-            </div>
-            <div class="form-group">
-                <label for="content_desc">CONTENT DESCRIPTION</label>
-                <input type="text" id="content_desc" value="" placeholder="Enter Content Description">
-            </div>
-            <div class="form-group col-xs-12">
-                <div class="d-block col-xs-6">MAKE CONTENT PRIVATE?</div>
+    <!-- landing page and navigation -->
+    <div class=" header-color header-background custom-bold-font jumbotronPadding no-gutters">
+        <!-- navigation bar -->
+        <nav class="navbar navbar-expand-md mavbar-colored offset-xs-0 sticky-top justify-content-end">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <!-- navbar-toggler-icon  -->
+                <span class="white-toggler"><i class="fas fa-bars"></i></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link nav-color" href="./home.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-color" href="./mycontent.html">MY CONTENT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-color mr-2" href="./profile.html">PROFILE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link nav-color" href="">LOGOUT</a>
+                    </li>
+                </ul>
 
-                <!-- <label for="content_private" class="d-block">MAKE CONTENT PRIVATE?</label> -->
-                <input type="checkbox" class="d-block col-xs-6" id="content_private">
+
             </div>
-            <div class="form-group">
-                <button type="button" id="upload">Upload Content</button>
+        </nav>
+
+        <nav class="sidebar col-xs-2 col-md-2">
+            <a class=" active" href="./home.html">HOME</a>
+            <a href="./mycontent.html">MY CONTENT</a>
+            <br>
+            <br>
+            <a href="./profile.html">PROFILE</a>
+            <a href="">LOGOUT</a>
+            <br>
+            <br>
+        </nav>
+        <div class="container-fluid">
+            <div class="row text-center col-xs-7 col-md-7 align-middle container justify-content-center ">
+
+                <form>
+                    <h3>UPLOAD CONTENT</h3>
+                    <div class="form-group">
+                        <label for="content">CONTENT FILE</label>
+                        <input type="file" id="content" accept="video/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="content_thumbnail">CONTENT THUMBNAIL</label>
+                        <input type="file" id="content_thumbnail" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label for="content_title">CONTENT TITLE</label>
+                        <input type="text" id="content_title" value="" placeholder="Enter Content Title">
+                    </div>
+                    <div class="form-group">
+                        <label for="content_desc">CONTENT DESCRIPTION</label>
+                        <input type="text" id="content_desc" value="" placeholder="Enter Content Description">
+                    </div>
+                    <div class="form-group">
+                        <label for="content_private"  style="word-wrap:break-word" class="d-block">MAKE CONTENT PRIVATE?
+                        <input type="checkbox" class="d-block" id="content_private"></label>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" id="upload">UPLOAD CONTENT</button>
+                    </div>
+                </form>
+
             </div>
-        </form>
+        </div>
+        <!-- <div class="custom-bold-font name1 col-xs-12 col-lg-4 align-middle jumbotron pl-2">welcome to<br>NOFLIX<h2
+          class="custom-bold-font align-middle">no flicks here</h2>
+      </div> -->
+        <div>&nbsp;</div>
     </div>
+
+
+    <!-- source:   https://www.shutterstock.com/image-photo/tropical-green-leaf-isolated-background678147802
+                   https://www.churchsupplies.com/store/palm-sunday-palm-dan-decor.shtml
+                   https://www.pngkey.com/detail/u2r5w7w7o0i1a9e6_tropical-leaf-png-clipart-palm-trees-leaf-clip
+                   https://www.maxpixel.net/Tropical-Exotic-Tree-Palm-Plant-Leaf-Nature-4206656 -->
+
+
+
+
+    <footer>
+
+        <div class="links d-xs-block col-xs-12">
+            <a href="mailto:netflix@gmail.com"><i class="far fa-envelope"></i></a>
+            <a href="https://instagram.com/netflix"><i class="fab fa-instagram"></i></a>
+            <a class="copyright float-right mr-5">&#169; copyright noflix 2023&nbsp;</a>
+        </div>
+
+    </footer>
+
     <script>
         $(document).ready(function () {
             $('#upload').click(function () { 
@@ -101,4 +166,7 @@
     </script>
     <script src="./js/upload.js"></script>
 </body>
+
+
+    
 </html>

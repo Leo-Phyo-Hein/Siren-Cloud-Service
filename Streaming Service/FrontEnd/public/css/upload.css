@@ -1,88 +1,354 @@
-html, body {
-    height: 100%;
-    margin: 0;
-  }
-  
-  html {
+/* general styles for all/multiple sheets */
+
+/* to remove excess width from right side of page */
+
+html {
     overflow-y: scroll;
     overflow-x: hidden;
-  }
-  
-  /* default fonts for body */
-  
-  body {
-    font-family: 'lato', sans-serif;
-  }
-  
-  /* custom fonts (lato) */
-  
-  .lato {
-    font-family: 'lato';
-  }
-    
-  body {
-    /* background-image: url('../image/pic1.jpg');
-    background: linear-gradient(135deg, #322c3a 20%, #211C27);
-    background-repeat: no-repeat;
-    background-size: cover; */
-    /* Other styles for the container */
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-    background: linear-gradient(-45deg, #453c50, #211C27, #080710);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    min-height: 100vh;
-  
-  }
-  
-  @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-  }
-  
-  
-    /* transform: translate(-50%,-50%);
-    top: 50%;
-    left: 50%; */
-  
-  
-  /* .container{
-    width: 600px;
-  
-    background-color: rgba(0,0,0,0.8);
-    position: relative;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 50px 35px;
-    vertical-align: middle;
-  } */
-  
-  .container {
-  
-    width: 600px;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
+}
 
+/* default fonts for body */
+
+body {
+    font-family: 'lato', sans-serif;
+}
+
+/* custom fonts (lato) */
+
+.lato {
+    font-family: 'lato';
+}
+
+.custom-bold-font {
+    font-family: "lato", sans-serif;
+    font-weight: 700;
+}
+
+/* changes text formatting when highlighted */
+
+*::selection {
+    background: #A8B1FF;
+    color: #000000;
+}
+
+/* changes default row formatting to fullscreen width, adds default diplay, alignment and row */
+
+.row {
+    width: 100vw !important;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+/* navigation items styles */
+
+.nav-color {
+    color: white;
+}
+
+.nav-item {
+    text-shadow: 0.05vw 0.05vw 1vw rgba(100, 100, 100, 0.3);
+}
+
+.nav-font {
+    font-family: "lato", sans-serif;
+    font-weight: 700;
+}
+
+nav li {
+    font-size: 17px;
+    margin-left: 4vw;
+    margin-right: 1vw;
+    padding-top: 1vw;
+}
+
+.navbar-nav .nav-item.active .nav-link, .navbar-nav .nav-item:hover .nav-link {
+    color: #A8B1FF;
+}
+
+/* navigation toggler (in smaller screens) */
+
+.white-toggler {
+    color: white;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 30px;
+}
+
+/* custom default padding for jumbotron */
+
+.jumbotronPadding {
+    padding: 0 !important;
+    margin-left: 0;
+    border-radius: 0;
+}
+
+/* to change default jumbotron width */
+
+.jumbotron {
+    width: 100vw !important;
+}
+
+/* custom container */
+
+.custom-container {
+    padding: 3em 1em 3em 1em !important;
+}
+
+/* general button styles */
+
+.btn, button {
+    background-color: #A8B1FF;
+    border: none;
+    color: white;
+    position: relative !important;
+    justify-content: center;
+    justify-self: center !important;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+
+    
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn:hover, button:hover {
+    background-color: #8793ff;
+}
+
+
+
+/* index.html styles */
+
+/* font color for name, website title */
+
+.header-color {
+    color: white;
+}
+
+/* landing page background */
+
+.header-background {
+    /* background: linear-gradient(135deg, #322c3a 20%, #211C27); */
+    background-color: #322c3a;
+    background: linear-gradient(-45deg, #453c50, #211C27, #080710);
+background-size: 400% 400%;
+
+    height: max-content;
+    width: 100vw;
+animation: gradient 15s ease infinite;
+min-height: 100vh;
+}
+
+@keyframes gradient {
+0% {
+    background-position: 0% 50%;
+}
+50% {
+    background-position: 100% 50%;
+}
+100% {
+    background-position: 0% 50%;
+}
+}
+
+
+/* container padding */
+
+.container {
+    /* padding: 0 16px; */
+    padding: 0;
+
+}
+
+/* clear floats before/after container */
+
+.container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* remove borders for form inputs, make form input boxes rectangular */
+
+.form-group input, .form-group select, .form-group textarea, input {
+    border-radius: 0;
+    background: transparent;
+    border-image-slice: 1;
+
+    border-image-source: linear-gradient(to left, #00000000, #D9D9D9, #00000000);
+    border-width: 1px;
+    border-bottom-color: #ccc;
+    border-bottom-style: solid;
+
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+#dialog {
+    color: #fff;
+}
+
+#authform>input[type=text] {
+    text-align: center !important;
+    font-size: 50px;
+    color: #fff;
+    margin: 0 4px !important;
+
+    border-radius: 0;
+    background: linear-gradient(#00000000, #fffdfd27);
+    border-image-slice: 1;
+
+    border-image-source: linear-gradient(to left, #00000000, #D9D9D9, #00000000);
+    border-width: 1px;
+    border-bottom-color: #ccc;
+    border-bottom-style: solid;
+
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+#authform>input[type=text]:selection {
+    color: #fff;
+}
+
+
+/* textarea styles */
+
+textarea {
+    height: calc(1.5*(1.5em + .75rem + 2px));
+    width: 100%;
+    font-family: 'lato';
+    font-size: 1.5vw;
+    margin-bottom: 1.5vw;
+    padding: 1vw 1vw 0 1vw;
+}
+
+/* change background color for form focus input */
+
+.form-control:focus, input:focus {
+    background: linear-gradient(#00000000, #fffdfd27);
+    outline: 0px none #fff !important;
+
+}
+
+
+
+/* footer styles */
+
+footer {
+    /* margin-top: 2vw; */
+    padding: 1em 0px 1em 1em;
+    bottom: 0;
+    background: #ffffff;
+}
+
+.links {
+    list-style: none;
+    width: 100vw;
+}
+
+.links>a {
+    text-align: right;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'lato';
+    font-weight: 100;
+    color: #444444;
+    margin-left: 1.3em;
+}
+
+.links>a:hover {
+    color: #A8B1FF;
+}
+
+.copyright {
+    pointer-events: none;
+    text-align: right;
+    font-size: 10px;
+}
+
+
+
+
+
+
+.sidebar {
+    /* background-color: #f1f1f1; */
+    height: 100vh;
+    float: left;
+    margin-top: 0;
+
+    border-radius: 0;
+    background: transparent;
+    border-image-slice: 1;
+
+    border-image-source: linear-gradient(135deg, #00000000 25%, #D9D9D9, #00000000);
+    border-width: 1px;
+    border-right-color: #ccc;
+    border-right-style: solid;
+
+    border-top: 0;
+    border-left: 0;
+    margin-right:2px;
+    z-index: 1;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.jumbotron {
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #A8B1FF;
+}
+
+
+
+
+
+
+
+body {
+    min-height: 100vh;
+}
+
+
+.container-fluid{
+    min-height: 100vh !important;
+    border-radius: 0;
+    background: transparent;
+    border-image-slice: 1;
+
+    border-image-source: linear-gradient(45deg, #00000000, #D9D9D9, #00000000);
+    border-width: 1px;
+    border-bottom-color: #ccc;
+    border-bottom-style: solid;
+
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 0;
+    z-index: 1;
+}
+
+.container{
+    /* width: 600px; */
+    background-color: rgba(0, 0, 0, 0.8);
+    /* position: absolute; */
+    text-align: center;
     border-radius: 10px;
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
     border: 2px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-    padding: 50px 35px;
-  }
-  
-  form *{
+    /* box-shadow: 0 0 40px rgba(8, 7, 16, 0.6); */
+}
+
+form *{
     color: #ffffff;
     letter-spacing: 0.5px;
     outline: none;
@@ -100,6 +366,7 @@ html, body {
     margin-top: 30px;
     font-size: 16px;
     font-weight: 500;
+    text-align: left;
   }
   input{
     display: block;
@@ -136,69 +403,17 @@ html, body {
     color: #8793ff;
   }
   
-  .form-group input, .form-group select, .form-group textarea, input {
-    border-radius: 0;
-    background: transparent;
-    border-image-slice: 1;
-  
-    border-image-source: linear-gradient(to left, #00000000, #D9D9D9, #00000000);
-    border-width: 1px;
-    border-bottom-color: #ccc;
-    border-bottom-style: solid;
-  
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-  }
-  
-  .form-control:focus, input:focus {
-    background: linear-gradient(#00000000, #fffdfd27);
-    outline: 0px none #fff !important;
-  
-  }
-  
-  a:hover {
-    color: #d146ff;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  
-  /* 
-  footer {
-    padding: 1em 0px 1em 1em;
-    position: absolute;
-    display: flex;
-    bottom: 0;
-    margin-top: auto;
-    background: #ffffff;
-  }
-  
-  .links {
-    list-style: none;
-    width: 100vw;
-  }
-  
-  .links>a {
-    text-align: right;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: 'lato';
-    font-weight: 100;
-    color: #444444;
-    margin-left: 1.3em;
-  }
-  
-  .links>a:hover {
-    color: #8793ff;
-  }
-  
-  .copyright {
-    pointer-events: none;
-    text-align: right;
-    font-size: 10px;
-  } */
 
   input[type="checkbox"]{
-      
-    float:right !important;
+
+    vertical-align:middle !important;
 }
+
+input[type="file"]{
+
+    background: transparent
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
