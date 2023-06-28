@@ -114,36 +114,6 @@ nav li {
     background-color: #8793ff;
 }
 
-/* custom row styles */
-
-.myRow {
-    font-family: 'niveau-grotesk';
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* custom colored row styles */
-
-.myRowColored {
-    background-color: #fff3ee;
-    font-family: 'niveau-grotesk';
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* style for leaf divider */
-
-.divider {
-    width: 100%;
-}
-
-/* styles for images in carousel */
-
-.carousel>.carousel-inner img {
-    width: 37%;
-    margin: auto;
-}
-
 
 
 /* index.html styles */
@@ -163,118 +133,6 @@ nav li {
     width: 100vw;
 }
 
-/* shadow in landing page background */
-
-.header-shadow {
-    box-shadow: 0 -15px 15px #66666641
-}
-
-/* leaf picture in header */
-
-
-/* styles for website title */
-
-/* styles for interest cards */
-
-.interest {
-    display: inline-block !important;
-}
-
-/* filter for javascript sample picture */
-
-.coding {
-    filter: hue-rotate(80deg)
-}
-
-/* filter for illustration */
-
-.illustration {
-    filter: brightness(102%);
-}
-
-/* modal styles */
-
-/* .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
-} */
-
-/* modal content styles */
-
-/* .modal-content {
-    position: relative;
-    background-color: #fefefe;
-    margin: auto;
-    padding: 0;
-    width: 80%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-} */
-
-/* modal animation */
-
-@-webkit-keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0
-    }
-
-    to {
-        top: 0;
-        opacity: 1
-    }
-}
-
-@keyframes animatetop {
-    from {
-        top: -300px;
-        opacity: 0
-    }
-
-    to {
-        top: 0;
-        opacity: 1
-    }
-}
-
-/* modal header styles */
-
-.modal-header {
-    padding: 4px 8px 4px 4px;
-    text-align: center;
-    background-color: #fff3ee;
-    color: black;
-}
-
-/* modal body */
-
-.modal-body {
-    padding: 16px;
-}
-
-/* past.html styles */
-
-/* past background */
-
-
-/* card shadows */
-
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    border: 1px solid #cccccc;
-}
-
 /* container padding */
 
 .container {
@@ -289,88 +147,6 @@ nav li {
     content: "";
     clear: both;
     display: table;
-}
-
-/* change color for year text */
-
-.years {
-    color: grey;
-}
-
-/* sp.html styles */
-
-/* background image */
-
-.sp-background {
-    background-image: url("../images/spbuilding.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-    filter: hue-rotate(320deg)
-}
-
-/* my class picture */
-
-.myclass {
-    width: 100%
-}
-
-/* course.html styles */
-
-/* background image */
-
-.course-background {
-    background-image: url("../images/dismbanner.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100vw;
-}
-
-/* even width columns for table */
-
-table {
-    table-layout: fixed;
-}
-
-/* change hover color for table rows */
-
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-    background-color: #fff3ee;
-}
-
-/* reduce size of arrow images in employment trend row */
-
-.employtrend td>img {
-    width: 50%;
-}
-
-/* align employment trend arrows centrally */
-
-.arrow {
-    text-align: center;
-}
-
-/* change background color for read more/less button for career table */
-
-#careertablebtn {
-    background-color: #cccccc;
-}
-
-/* feedback.html styles */
-
-/* color for feedback header */
-
-.feedbackTitle {
-    color: #ffcbc4;
-}
-
-/* change font size and color for feedback page */
-
-.feedback {
-    font-size: 20px;
-    color: #ffffff;
 }
 
 /* remove borders for form inputs, make form input boxes rectangular */
@@ -418,11 +194,6 @@ table {
     color: #fff;
 }
 
-/* make "date" form input take up entire column width */
-
-#visitDate {
-    width: 100%;
-}
 
 /* textarea styles */
 
@@ -443,100 +214,7 @@ textarea {
 
 }
 
-/* range slider styles */
 
-#experience {
-    appearance: none;
-    background: #ffffff;
-    outline: none;
-}
-
-#experience::-webkit-slider-thumb {
-    appearance: none;
-    height: calc(1.5em + .75rem + 2px);
-    width: calc(1.5em + .75rem + 2px);
-    background: #3e696b;
-    cursor: pointer;
-    border-radius: 0;
-}
-
-/* form button styles */
-
-.submit, .cancel {
-    padding: .5rem 1rem;
-    font-size: 1.25rem;
-    line-height: 1.5;
-    display: inline-block;
-    background-color: #ff5e7d;
-}
-
-.submit:hover, .cancel:hover {
-    background-color: #ff3c63;
-}
-
-/* add navbar background when scrolled, to prevent navigation text from disrupting user's form experience on larger screens */
-
-/* .navbar-colored {
-    background: transparent;
-}
-
-.navbar-colored.scrolled {
-    background: linear-gradient(135deg, #ff5e7d 20%, #ffcfba);
-    transition: 1500ms ease;
-} */
-
-.loginbox {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.service {
-    position: absolute !important;
-    margin-left: auto;
-    margin-right: auto;
-    margin: 0 !important;
-}
-
-.login-form {
-    margin: auto;
-    padding-top: 2vw;
-    /* z-index: 3;
-    position: absolute; 
-    */
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    /* background: linear-gradient(135deg, #322c3a 20%, #211C27); */
-    background: #0b0b0d;
-    box-shadow: 0 0 40px 0 rgba(136, 136, 136, 0.193);
-
-}
-
-/* .blurred-box {
-    background-size: 400% 400% !important;
-    background: inherit;
-    z-index: 1;
-    overflow: hidden;
-    margin: auto;
-    padding-bottom: 2vw;
-    border-radius: 5px;
-    box-shadow: 0 0 40px 0 rgba(136, 136, 136, 0.193);
-}
-
-.blurred-box:after {
-    content: '';
-    background: inherit;
-    position: absolute;
-    left: 0px;
-    right: 0;
-    top: 0px;
-    bottom: 0;
-    filter: blur(20px);
-} */
-
-
-
-/* for all html sheets */
 
 /* footer styles */
 
@@ -563,7 +241,7 @@ footer {
 }
 
 .links>a:hover {
-    color: #ffa5ab;
+    color: #A8B1FF;
 }
 
 .copyright {
@@ -573,118 +251,13 @@ footer {
 }
 
 
-#wrapper {
-    /* font-family: Lato; */
-    font-size: 1.5rem;
-    text-align: center;
-    box-sizing: border-box;
-    /* color: #333; */
-}
-
-#dialog {
-    /* margin: 10px auto; */
-    padding: 20px 30px;
-    display: inline-block;
-    box-shadow: 0 0 30px #cccccc22;
-    background-color: #0b0b0d;
-    overflow: hidden;
-    position: relative;
-    /* max-width: 650px; */
-}
-
-/* h3 {
-    margin: 0 0 10px;
-    padding: 0;
-    line-height: 1.25;
-} */
-
-/* span {
-    font-size: 90%;
-} */
 
 
 
-
-
-
-
-
-
-
-/* #form {
-    max-width: 550px;
-    margin: 25px auto 0;
-}
-*/
-#search-container {
-    margin-left: 50px !important;
-    text-align: center;
-    font-size: 50px;
-    border: solid 1px #ccc;
-    box-shadow: 0 0 5px #ccc inset;
-    outline: none;
-    transition: all .2s ease-in-out;
-    border-radius: 3px;
-}
-
-#search-container, button {
-    height: 34px;
-    position: absolute;
-    vertical-align: middle;
-}
-
-#search-container:focus {
-    border-color: purple;
-    box-shadow: 0 0 5px purple inset;
-}
-
-/* input::selection {
-    background: transparent;
-} */
-
-
-
-
-/*
-button {
-    margin: 30px 0 50px;
-    width: 80%;
-    padding: 6px;
-    background-color: #B85FC6;
-    border: none;
-    text-transform: uppercase;
-}
-
-button:close {
-    border: solid 2px;
-    border-radius: 30px;
-    line-height: 19px;
-    font-size: 120%;
-    width: 22px;
-    position: absolute;
-    right: 5px;
-    top: 5px;
-} */
-
-
-
-
-
-
-/* div {
-    position: relative;
-    z-index: 1;
-} */
-
-/* img {
-    position: absolute;
-    bottom: -70px;
-    right: -63px;
-} */
 
 .sidebar {
     /* background-color: #f1f1f1; */
-    /* height: 100vh; */
+    height: 100vh;
     float: left;
     margin-top: 0;
 
@@ -692,14 +265,14 @@ button:close {
     background: transparent;
     border-image-slice: 1;
 
-    border-image-source: linear-gradient(45deg, #00000000, #D9D9D9, #00000000);
+    border-image-source: linear-gradient(135deg, #00000000 25%, #D9D9D9, #00000000);
     border-width: 1px;
-    border-bottom-color: #ccc;
-    border-bottom-style: solid;
+    border-right-color: #ccc;
+    border-right-style: solid;
 
     border-top: 0;
     border-left: 0;
-    border-bottom: 0;
+    margin-right:2px;
     z-index: 1;
 }
 
@@ -755,44 +328,7 @@ button:close {
     height: auto;
 }
 
-#uploadnewbtn {
-    font-size: 25px;
 
-    display: inline-flex;
-    align-items: center;
-    padding: 2rem;
-}
-
-#editbtn {
-    font-size: 25px;
-    border: 2px solid #A8B1FF;
-    background-color: transparent;
-    border-color: #A8B1FF;
-
-    display: inline-flex;
-    align-items: center;
-    padding: 2rem;
-}
-
-#editbtn:hover {
-    background-color: #8793ff;
-    border: 2px solid #8793ff;
-}
-
-.infobtn, .singleeditbtn {
-    font-size: 20px;
-    background: transparent;
-
-    display: inline-flex;
-    align-items: center;
-    padding-top: 1.5rem;
-    padding-right: 0;
-}
-
-.infobtn:hover, .singleeditbtn:hover {
-    color: #8793ff;
-    background-color: transparent;
-}
 
 
 
@@ -802,46 +338,6 @@ body {
     min-height: 100vh;
 }
 
-.drag-area {
-    border: 2px dashed #fff;
-    height: 500px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.drag-area.active {
-    border: 2px solid #fff;
-}
-
-.drag-area .icon {
-    font-size: 100px;
-    color: #fff;
-}
-
-.drag-area header {
-    font-size: 30px;
-    font-weight: 500;
-    color: #fff;
-}
-
-.drag-area span {
-    font-size: 25px;
-    font-weight: 500;
-    color: #fff;
-    margin: 10px 0 15px 0;
-}
-
-.drag-area button {
-    font-size: 20px;
-    font-weight: 500;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 1.5rem;
-}
 
 .container-fluid{
     min-height: 100vh !important;
@@ -860,11 +356,15 @@ body {
     z-index: 1;
 }
 
-.editthumbnail{
-    position: relative;  
+.content-container{
+    background-color: #110f15;
+    /* border: 2px solid rgba(255,255,255,0.1); */
+    /* box-shadow: 0 0 40px rgba(8,7,16,0.6); */
 }
 
-.editthumbnail > button {
-    float: right;
-  }
-  
+.content-container > img{
+    width: 100%;
+    height: 160px;
+    object-fit: scale-down;
+    align-self: baseline;
+}
