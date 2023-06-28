@@ -57,16 +57,18 @@ body {
 
   width: 600px;
   background-color: rgba(0, 0, 0, 0.8);
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+  /* position: absolute;
+  transform: translate(-50%, -50%); */
+  /* top: 50%;
+  left: 50%; */
   border-radius: 10px;
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-  padding: 50px 35px;
-  margin-top:50px;
+  padding: 50px 35px 600px 35px;
+  margin-top:200px;
+  min-height: 100vh;
+  vertical-align: middle;
 }
 
 form * {

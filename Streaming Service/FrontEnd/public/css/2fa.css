@@ -63,7 +63,7 @@ html {
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 50px 35px;
+    padding: 45px 35px;
 }
 form *{
     color: #ffffff;
@@ -91,22 +91,24 @@ label{
 }
 input{
     display: block;
-    height: 50px;
+    height: 70px;
     width: 100%;
     background-color: rgba(255,255,255,0.07);
     border-radius: 3px;
     padding: 0 10px;
     margin-top: 8px;
-    font-size: 14px;
-    font-weight: 300;
+    font-size: 25px;
+    font-weight: 500;
     justify-content: center;
     text-align: center;
 }
 ::placeholder{
     color: #e5e5e5;
+    font-size: 17px;
+    font-weight: 300;
 }
 button{
-    margin-top: 50px;
+    margin-top: 10px;
     width: 100%;
     background-color: #c0c6ff;
     color: #080710;
@@ -153,3 +155,6 @@ a:hover {
   text-decoration: underline;
 }
   
+input:focus::placeholder {
+    color: transparent;
+  }
