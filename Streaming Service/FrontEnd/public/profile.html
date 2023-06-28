@@ -29,7 +29,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     
     
-    <link rel="stylesheet" href="css/upload.css">
+    <link rel="stylesheet" href="css/profile.css">
 </head>
 <body>
     <!-- landing page and navigation -->
@@ -48,7 +48,7 @@
                     <li class="nav-item">
                         <a class="nav-link nav-color" href="./mycontent.html">MY CONTENT</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link nav-color" href="./profile.html">PROFILE</a>
                     </li>
                     <li class="nav-item">
@@ -74,29 +74,21 @@
             <div class="row text-center col-xs-8 col-md-8 align-middle container justify-content-center p-4">
 
                 <form class="col-xs-10 col-md-10">
-                    <h3>UPLOAD CONTENT</h3>
+                    <h3>MY PROFILE</h3>
                     <div class="form-group">
-                        <label for="content">CONTENT FILE</label>
-                        <input type="file" id="content" accept="video/*">
+                        <label for="user_username">MY USERNAME</label>
+                        <input type="text" id="user_username" value="" placeholder="Current Username">
                     </div>
                     <div class="form-group">
-                        <label for="content_thumbnail">CONTENT THUMBNAIL</label>
-                        <input type="file" id="content_thumbnail" accept="image/*">
+                        <label for="user_email">MY EMAIL</label>
+                        <input type="text" id="user_email" value="" placeholder="Current Email">
                     </div>
                     <div class="form-group">
-                        <label for="content_title">CONTENT TITLE</label>
-                        <input type="text" id="content_title" value="" placeholder="Enter Content Title">
+                        <label for="user_password">MY PASSWORD</label>
+                        <input type="text" id="user_password" value="" placeholder="Current Password">
                     </div>
                     <div class="form-group">
-                        <label for="content_desc">CONTENT DESCRIPTION</label>
-                        <input type="text" id="content_desc" value="" placeholder="Enter Content Description">
-                    </div>
-                    <div class="form-group">
-                        <label for="content_private"  style="word-wrap:break-word" class="d-block">MAKE CONTENT PRIVATE?
-                        <input type="checkbox" class="d-block" id="content_private"></label>
-                    </div>
-                    <div class="form-group">
-                        <button type="button" id="upload">UPLOAD CONTENT</button>
+                        <button type="button" id="saveprofile">SAVE PROFILE</button>
                     </div>
                 </form>
 
@@ -128,45 +120,9 @@
     </footer>
 
     <script>
-        $(document).ready(function () {
-            $('#upload').click(function () { 
-                // Get form values
-                var content_title = $('#content_title').val();
-                var content_desc = $('#content_desc').val();
-                var content_private = $('#content_private').is(':checked');
-                var content = $('#content')[0].files[0];
-                var content_thumbnail = $('#content_thumbnail')[0].files[0];
-                
-                // Create FormData object to send file data
-                var formData = new FormData();
-                formData.append('content_title', content_title);
-                formData.append('content_desc', content_desc);
-                formData.append('content_private', content_private);
-                formData.append('content', content);
-                formData.append('content_thumbnail', content_thumbnail);
-                $.ajax({
-                    headers: { 'authorization': localStorage.getItem('JWTtoken') },
-                    url: "http://localhost:8083/user/content/upload",
-                    type: "POST",
-                    data: formData,
-                    processData: false,
-                    contentType: false,
-                    success: function(response) {
-                        if (response.success) {
-                            window.alert('Content Uploaded Successfully');
-                            window.location.assign("http://localhost:3002/home.html");
-                        }
-                    },
-                    error: function(xhr, textStatus, err) {
-                        var errorMessage = xhr.responseJSON.message;
-                        window.alert(errorMessage);
-                    }
-                });
-                return false;
-            });
-        });
+        
     </script>
-    <script src="./js/upload.js"></script>
+    <script src=""></script>
 </body>
 
 
