@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,31 +20,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
     
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="css/register.css">
 </head>
-<body>
-    <div class="container">
+<body class="d-flex flex-column h-100 p-3">
+    <div class="container ">
         <form>
-            <h3>Register Account</h3>
+            <h3>REGISTER ACCOUNT</h3>
 
             <div class="form-group">
-                <label for="username">Username</label>
+                <label for="username">USERNAME</label>
                 <input type="text" id="username" value="" placeholder="Enter a username">
             </div>
 
             <div class="form-group">
-                <label for="user_email">Email</label>
+                <label for="user_email">EMAIL</label>
                 <input type="email" id="user_email" value="" placeholder="Enter your email">
             </div>
 
             <div class="form-group">
-                <label for="user_password">Password</label>
+                <label for="user_password">PASSWORD</label>
                 <input type="password" id="user_password" value="" placeholder="Enter your password">
             </div>
 
             <div class="form-group">
-                <button type="button" id="register">Register</button>
+                <button type="button" id="register">REGISTER</button>
             </div>
 
             <div>
@@ -52,7 +56,20 @@
             </div>
         </form>
     </div>
+    <br><br>
+    <div>&nbsp;</div>
+    <div>&nbsp;</div>
+
+    <!-- <footer>
+
+        <div class=" footer links d-xs-block col-xs-12 mt-auto">
+            <a href="mailto:netflix@gmail.com"><i class="far fa-envelope"></i></a>
+            <a href="https://instagram.com/netflix"><i class="fab fa-instagram"></i></a>
+            <a class="copyright float-right mr-5">&#169; NOTFLIX 2023.&nbsp;</a>
+        </div>
     
+    </footer> -->
+
     <script>
         $(document).ready(function () {
             $('#register').click(function () { 

@@ -6,7 +6,7 @@ var dbConnect={
         var conn=mysql.createConnection({
             host:"localhost",
             user:"root", //Replace with company's database account username
-            password:"Y0nGcoCk04c0@cH", //Replace with company's database account password
+            password:"1qwer$#@!", //Replace with company's database account password
         });
         return conn;
     }
