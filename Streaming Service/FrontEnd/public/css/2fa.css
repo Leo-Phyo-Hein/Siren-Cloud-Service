@@ -3,16 +3,54 @@ html, body {
     margin: 0;
 }
     
-body {
-    background-image: url('../image/pic1.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+
+html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  /* default fonts for body */
+  
+  body {
+    font-family: 'lato', sans-serif;
+  }
+  
+  /* custom fonts (lato) */
+  
+  .lato {
+    font-family: 'lato';
+  }
+  
+  body {
+    /* background-image: url('../image/pic1.jpg');
+      background: linear-gradient(135deg, #322c3a 20%, #211C27);
+      background-repeat: no-repeat;
+      background-size: cover; */
     /* Other styles for the container */
-    
+  
     display: flex;
     justify-content: center;
     align-items: center;
-}
+  
+    background: linear-gradient(-45deg, #453c50, #211C27, #080710);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    padding-bottom: 50px !important;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+  
+    50% {
+      background-position: 100% 50%;
+    }
+  
+    100% {
+      background-position: 0% 50%;
+    }
+  }
   
 .container{
     width: 600px;
@@ -28,7 +66,6 @@ body {
     padding: 50px 35px;
 }
 form *{
-    font-family: 'Poppins',sans-serif;
     color: #ffffff;
     letter-spacing: 0.5px;
     outline: none;
@@ -71,7 +108,7 @@ input{
 button{
     margin-top: 50px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #c0c6ff;
     color: #080710;
     padding: 15px 0;
     font-size: 18px;
@@ -79,14 +116,40 @@ button{
     border-radius: 5px;
     cursor: pointer;
 }
+
+button:hover{
+    background-color: #8793ff;
+    color: white
+  }
   
 form a {
-    color: red;
+    color: #8793ff;
 }
   
+.form-group input, .form-group select, .form-group textarea, input {
+  border-radius: 0;
+  background: linear-gradient(#00000000, #fffdfd27);
+  border-image-slice: 1;
+
+  border-image-source: linear-gradient(to left, #00000000, #D9D9D9, #00000000);
+  border-width: 1px;
+  border-bottom-color: #ccc;
+  border-bottom-style: solid;
+
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.form-control:focus, input:focus {
+  background: linear-gradient(#00000000, #fffdfd27);
+  outline: 0px none #fff !important;
+
+}
+
 a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
+  color: #d146ff;
+  background-color: transparent;
+  text-decoration: underline;
 }
   

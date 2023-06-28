@@ -19,33 +19,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     
     
     <link rel="stylesheet" href="css/upload.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container  align-middle justify-content-center">
         <form>
-            <h3>Upload Content</h3>
+            <h3>UPLOAD CONTENT</h3>
             <div class="form-group">
-                <label for="content">Content File</label>
+                <label for="content">CONTENT FILE</label>
                 <input type="file" id="content" accept="video/*">
             </div>
             <div class="form-group">
-                <label for="content_thumbnail">Content Thumbnail</label>
+                <label for="content_thumbnail">CONTENT THUMBNAIL</label>
                 <input type="file" id="content_thumbnail" accept="image/*">
             </div>
             <div class="form-group">
-                <label for="content_title">Content Title</label>
+                <label for="content_title">CONTENT TITLE</label>
                 <input type="text" id="content_title" value="" placeholder="Enter Content Title">
             </div>
             <div class="form-group">
-                <label for="content_desc">Content Description</label>
+                <label for="content_desc">CONTENT DESCRIPTION</label>
                 <input type="text" id="content_desc" value="" placeholder="Enter Content Description">
             </div>
-            <div class="form-group">
-                <label for="content_private">Make Content Private?</label>
-                <input type="checkbox" id="content_private">
+            <div class="form-group col-xs-12">
+                <div class="d-block col-xs-6">MAKE CONTENT PRIVATE?</div>
+
+                <!-- <label for="content_private" class="d-block">MAKE CONTENT PRIVATE?</label> -->
+                <input type="checkbox" class="d-block col-xs-6" id="content_private">
             </div>
             <div class="form-group">
                 <button type="button" id="upload">Upload Content</button>
