@@ -56,9 +56,6 @@ body {
 
 nav li {
     font-size: 17px;
-    margin-left: 4vw;
-    margin-right: 1vw;
-    padding-top: 1vw;
 }
 
 .navbar-nav .nav-item.active .nav-link, .navbar-nav .nav-item:hover .nav-link {
