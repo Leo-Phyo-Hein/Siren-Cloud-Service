@@ -122,7 +122,7 @@ nav li {
 .header-background {
     /* background: linear-gradient(135deg, #322c3a 20%, #211C27); */
     background-color: #322c3a;
-    background: linear-gradient(-45deg, #3c4a50, #1c2727, #070e10);
+    background: linear-gradient(-45deg, #1d3644, #121f27, #070e10);
 background-size: 400% 400%;
 
     height: max-content;
