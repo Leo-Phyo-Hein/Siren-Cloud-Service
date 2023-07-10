@@ -42,8 +42,10 @@ body {
 /* navigation items styles */
 
 .nav-color {
-    color: white;
+    color: white !important;
 }
+
+
 
 .nav-item {
     text-shadow: 0.05vw 0.05vw 1vw rgba(100, 100, 100, 0.3);
